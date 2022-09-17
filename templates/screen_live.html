@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid bg1 mt-1">
+  <div class="row bg2">
+    <div class="col-lg-8 col-md-8 ">
+      <img class="video_feed container-fluid" src="{% url 'video_feed' %}">
+
+      </div>
+      <div class="col-lg-4 col-md-4 ">
+        <img src="{% static 'media/advertisement/advertisement.gif' %}" class="rounded" style="height:75vh;width:400px" alt="">
+
+      </div>
+
+      </div>
+    </div>
+
+
+    {% endblock content %}

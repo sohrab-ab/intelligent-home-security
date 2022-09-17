@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Intelligent Home security</title>
+    <link rel="stylesheet" href="{% static 'css/my.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header class="bg-warning pt-2 pb-1 sticky-top">
+        <div class="row">
+        <div class="col-lg-4 col1 m-auto">
+          <h1 class="text-white text-center mb-0"><a href="{% url 'home' %}"><img class="img-responsive"
+       src="{% static 'media/logo/cctv.png' %}"></a>
+       <span class="s1">Intelligent</span> Home Security</h1>
+
+          </div>
+        <div class="col-lg-8 col2 myDIV">
+          <ul class="nav float-right pr-2 justify-content-center">
+            <li class="nav-item"><a class="b1 rounded-left text-white nav-link" href="{% url 'home' %}">Home</a></li>
+            <li class="nav-item"><a class="b1 rounded-right text-white nav-link" href="{% url 'table1' %}">DataBox</a></li>
+            <li class="nav-item"><a class="b1 text-white nav-link" href="{% url 'registration_form' %}">Resident Registration</a></li>
+            <li class="nav-item"><a class="b1 text-white nav-link" href="{% url 'user_list' %}">Registered Residents</a></li>
+            <li class="nav-item"><a class="b1 rounded-right text-white nav-link" href="{% url 'about_us' %}">About US</a></li>
+          </ul>
+
+          <div class=" float-right mr-4">
+
+        {% if user.is_authenticated %}
+
+          <span><b><span class="text-white">Hello</span> <span class="text-secondary">{{request.user}}</span></b></span>
+        {% else %}
+        <span><b><span class="text-white">Hello</span> <span class="text-secondary">Anonymous User !</span></b></span>
+        {% endif %}
+
+<br>
+          {% if user.is_authenticated %}
+          <span class="ml-4"><a href="{% url 'logout' %}" style="color:blue;">Logout</a></span>
+          {% else %}
+          {{pass}}
+          {% endif %}
+          </div>
+
+
+        </div>
+
+        </div>
+      </header>
+
+      {% block content %}
+      {% endblock content %}
+
+
+  </div>
+
+</div>
+
+</div>
+
+
+    </div>
+
+
+
+
+  </body>
+</html>

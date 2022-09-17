@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<div class="container-fluid bg1 mt-1">
+
+  <div class="row p-2 ml-5">
+    <div class="col-md-6">
+      <div class="well well-sm">
+
+          <form action="" method="POST"  enctype="multipart/form-data">
+            {% csrf_token %}
+      <div class="form-group">
+                <label class="l1" for="name"> Name</label>
+                {{ form.name }}
+              </div>
+              <div class="form-group">
+                <label for="flat"> Flat</label>
+                {{ form.flat }}
+              </div>
+              <div class="form-group">
+                <label class="l1" for="phone"> Phone</label>
+                {{ form.phone }}
+              </div>
+              <div class="form-group">
+              <label class="l1" for="email"> Email</label>
+              <div class="input-group">
+                <span class="input-group-addon"
+                  ><span class="glyphicon glyphicon-envelope"></span>
+                </span>
+                {{ form.email }}
+              </div>
+
+              <div class="form-group border mt-4">
+                <label class="l1 m-2" for="user_image"> User Image</label>
+                {{ form.image }}
+              </div>
+
+
+              <input type="submit" class="btn btn-sm btn-success mt-1" value="Save" />
+                  </form>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+{% else %}
+
+<div class="container-fluid bg1 mt-1">
+
+
+<h3 style="color: red; text-align:center;padding-top: 50px;">Login first, to resident registration.</h3>
+</div>
+{% endif %}
+
+
+    {% endblock content %}

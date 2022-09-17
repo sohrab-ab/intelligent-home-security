@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<div id="#overflowTest" class="bg3 bg1 mt-1 rounded ">
+
+<table class="table table-striped table-dark scroll1">
+
+    {% for i in object_list %}
+
+    <tbody>
+      <tr">
+
+
+        <td>{{i.name}}</td>
+        <td><a href="{{i.get_absolute_url}}"><span style="float: left;"><b>View</b></span> </a></td>
+        <td><a href="{% url 'userdelete' i.id %}" class="text-danger"><b>Delete</b></a> </td>
+        <td><a href="{% url 'userupdate' i.id %}" class="text-light"><b>Update</b></a> </td>
+
+      </tr>
+
+    </tbody>
+    {% endfor %}
+  </table>
+
+</div>
+{% else %}
+
+<div class="container-fluid bg1 mt-1">
+
+
+<h3 style="color: red; text-align:center;padding-top: 50px;">Login first, to watch information.</h3>
+</div>
+{% endif %}
+
+
+    {% endblock content %}

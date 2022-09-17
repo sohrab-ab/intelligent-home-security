@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid bg1">
+
+
+<h1><span class="text-danger">Delete</span> User</h1>
+<form action="" method="post">{% csrf_token %}
+<p style="color: rgb(83, 49, 49);">Are you sure you want to delete "{{userregi.name}}" details?</p>
+<input type="submit" value="Confirm" class="btn btn-sm btn-danger">
+</form>
+
+</div>
+{% endblock content %}

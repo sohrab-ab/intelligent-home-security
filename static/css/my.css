@@ -1,0 +1,134 @@
+
+
+.b1{
+  border: 5px solid white;
+
+}
+
+
+.s1{
+  color: grey;
+}
+
+.nav-item{
+  padding: 5px;
+
+
+}
+
+
+.nav-item:hover{
+  font-weight: bolder;
+}
+
+
+.bg1{
+
+  height: 100vh;
+  background-color: #f6f6e3;
+  border-radius: 3px;
+  border: 2px solid lightgrey;
+
+}
+
+
+.bg3{
+
+  
+  background-color: #f6f6e3;
+  border-radius: 3px;
+  border: 2px solid lightgrey;
+
+}
+.video_feed{
+  border-radius: 5px;
+  height: 75vh;
+}
+
+.img-responsive{
+  height: 50px;
+  width: 50px;
+}
+
+
+.my-custom-scrollbar {
+position: relative;
+height: 200px;
+overflow: auto;
+}
+.table-wrapper-scroll-y {
+display: block;
+}
+
+.bg2{
+  margin-top: 15px;
+
+
+}
+
+
+#overflowTest {
+  background: lightgrey;
+  color: white;
+  height: 75vh;
+  overflow: scroll;
+  border: 3px solid white;
+
+
+}
+
+
+p{
+  padding: 10px;
+}
+
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th{
+
+  border: 3px solid white;
+  text-align: center;
+  padding: 8px;
+  background-color:#e2e092;
+  color: #5b5b5b;
+
+}
+
+
+td{
+  text-align: center;
+  border: 3px solid white;
+  text-align: left;
+  padding: 8px;
+}
+
+
+
+
+label{
+  font-weight: bold;
+  font-family: sans-serif;
+  color: white;
+  background-color: black;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.card{
+    border: 3px solid grey;
+    height: 100vh;
+}
+.scroll1{
+  overflow: scroll;
+}
+
+#div101{
+  margin-left: 50%;
+  padding: 10px;
+}

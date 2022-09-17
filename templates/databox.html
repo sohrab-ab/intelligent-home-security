@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+{% if user.is_authenticated %}
+<div id="#overflowTest" class="bg3 ">
+
+
+
+    <table class=" table-striped border-left ">
+
+      <thead style="border:none; ">
+        <tr >
+          <th>Index</th>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Entry</th>
+          <th>Exit</th>
+        </tr>
+      </thead>
+
+      {% for i in d %}
+        <tr>
+          {%for k,v in i.items %}
+
+          <td>{{v}}</td>
+
+          {% endfor %}
+        </tr>
+      {% endfor %}
+
+      </table>
+  </div>
+  {% else %}
+
+<div class="container-fluid bg1 mt-1">
+
+
+<h3 style="color: red; text-align:center;padding-top: 50px;">Login first, to watch information.</h3>
+</div>
+{% endif %}
+
+    {% endblock content %}
